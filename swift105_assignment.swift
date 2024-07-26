@@ -14,8 +14,8 @@ func 體重檢測(weight: Double, height: Double) {
     let bmi = 0
     print("你的 BMI 是：\(bmi)")
     // 👇 BMI 小於等於 18.5 時印出「過瘦體型」；BMI 大於等於 30 時印出「過胖」；其餘印出「正常體型」。
-    let 體型 = bmi.is
-    print("？體型")
+    let 體型 = bmi.isLessThanOrEqualTo(18.5) ? "過瘦" : (bmi.isGreaterThanOrEqualTo(30) ? "過胖" : "正常體型")
+    print("\(體型)體型")
 }
 
 體重檢測(weight: 47.95385, height: 1.61)
