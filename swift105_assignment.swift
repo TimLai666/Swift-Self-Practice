@@ -10,13 +10,13 @@ import Foundation
 func 體重檢測(weight: Double, height: Double) {
     print("🌼 體重：\(weight) 公斤，身高 \(height * 100) 公分")
     // 👇 體重低於 50 時印出「不能捐血」；50 或 50 以上印出可以捐血。
-    let 不能捐血 = weight.isLess(than: 50) ? true : false
+    let 不能捐血 = weight.isLess(than: 50)
     print(不能捐血 ? "不能捐血" : "可以捐血")
     // 👇 計算出 BMI: 體重 / (身高 * 身高)
     let bmi = weight / (pow(height, 2))
     print("你的 BMI 是：\(bmi)")
     // 👇 BMI 小於等於 18.5 時印出「過瘦體型」；BMI 大於等於 30 時印出「過胖」；其餘印出「正常體型」。
-    let 過瘦 = bmi.isLessThanOrEqualTo(18.5) ? true : false
+    let 過瘦 = bmi.isLessThanOrEqualTo(18.5)
     let 過胖 = bmi.isLess(than: 30) ? false : true
     print(過瘦 ? "過瘦體型" : (過胖 ? "過胖體型" : "正常體型"))
 }
@@ -31,8 +31,8 @@ func 體重檢測(weight: Double, height: Double) {
 
 func 名字優惠活動(name: String) {
     // 👇 請印出正確的折扣資訊。名字裡有虎的人可以打 8 折；名字開頭是虎的人可以打 5 折；其餘沒有折扣。
-    let 打5折 = name.starts(with: "虎") ? true : false
-    let 打8折 = name.contains("虎") ? true : false
+    let 打5折 = name.starts(with: "虎")
+    let 打8折 = name.contains("虎")
     let discount = 打5折 ? "5折" : (打8折 ? "8折" : "沒有折扣")
     print("📢 名字是 \(name) 的客人，您可以獲得\(discount)")
 }
